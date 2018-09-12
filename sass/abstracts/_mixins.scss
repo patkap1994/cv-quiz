@@ -1,0 +1,13 @@
+@mixin dimensions($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin rotate($deg) {
+    transform: rotate($deg);
+    -webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    -o-transform: rotate($deg);
+}
+

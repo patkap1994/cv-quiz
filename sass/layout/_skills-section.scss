@@ -1,0 +1,52 @@
+.skills-list {
+    @extend %list-style;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px;
+    grid-gap: 1em;
+    padding: 0 3em;
+
+    li {
+        display: flex;
+        align-items: center;
+
+        .chart {
+            margin-right: 0.2em;
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: 0.5em;
+        }
+    }
+}
+
+//MEDIA QUERIES
+@media screen and (max-width: $large) {
+    .skills-list {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 100px 100px;
+    }
+}
+
+@media screen and (max-width: $small) {
+    .skills-list {
+        grid-template-rows: auto;
+
+        li {
+            flex-direction: column;
+            margin: 0;
+            text-align: center;
+            justify-content: center;
+
+            .chart {
+                margin: 0;
+            }
+
+            p {
+                margin-top: 0.5em;
+            }
+        }
+    }
+}

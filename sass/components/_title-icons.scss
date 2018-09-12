@@ -1,0 +1,15 @@
+.section-caption {
+    @extend %flex;
+    
+    margin: 2em 0;
+
+    .section-icon {
+        @extend %text-center;
+        width: 200px;
+        color: $secondary-color;
+    }
+
+    .section-title {
+        @include dimensions(100%, auto);
+    }
+}

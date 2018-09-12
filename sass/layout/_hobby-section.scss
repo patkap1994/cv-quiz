@@ -1,0 +1,83 @@
+.hobbies {
+    margin: 0 0 3em;
+
+    .hobbies-list {
+        @extend %list-style;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 60px 60px;
+        grid-gap: 1.5em;
+        font-size: 1.1rem;
+        margin: 2em auto 0;
+        width: 80%;
+
+        li {
+            display: flex;
+            align-items: center;
+        }
+
+        .icon-hobby {
+            @extend %flex;
+
+            @include dimensions(60px, 60px);
+
+            margin-right: 0.4em;
+            background: $primary-color;
+            color: $secondary-color;
+        }
+    }
+}
+
+//MEDIA QUERIES
+@media screen and (min-width: $medium) and (max-width: $large) {
+    .hobbies {
+        margin: 0 0 1em;
+
+        .hobbies-list {
+            grid-template-columns: 1fr;
+            grid-gap: 1em;
+            width: 100%;
+
+            p {
+                display: block;
+                margin: 0 auto;
+            }
+
+            .icon-hobby {
+                margin: 0;
+                width: 25%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $medium) {
+    .hobbies {
+        .hobbies-list {
+            grid-row-gap: 3em;
+            margin-top: 3em;
+
+            .icon-hobby {
+                @include dimensions(100px, 100px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $small) {
+    .hobbies {
+        margin: 0;
+
+        .hobbies-list {
+            grid-template-columns: 1fr;
+            grid-gap: 0.4em;
+            margin: 0;
+            width: 100%;
+
+            .icon-hobby {
+                @include dimensions(25%, 60px);
+            }
+        }
+    }
+}

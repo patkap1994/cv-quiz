@@ -1,0 +1,105 @@
+/****************************************************************
+ *
+ * CSS Percentage Circle
+ * Author: Andre Firchow
+ *
+ *****************************************************************/
+ 
+ .rect-auto, .c100.p55 .slice, .c100.p50 .slice, .c100.p70 .slice, .c100.p85 .slice, .c100.p90 .slice {
+     clip: rect(auto, auto, auto, auto);
+ }
+
+.c100 .bar, .c100.p55 .fill, .c100.p50 .fill, .c100.p70 .fill, .c100.p85 .fill, .c100.p90 .fill {
+    @extend %border-radius;
+
+    @include dimensions(0.84em, 0.84em);
+    @include rotate(0deg);
+
+    position: absolute;
+    border: 0.08em solid $secondary-color;
+    clip: rect(0em, 0.5em, 1em, 0em);
+}
+
+.pie-fill, .c100.p55 .bar:after, .c100.p55 .fill, .c100.p50 .bar:after, .c100.p50 .fill, .c100.p70 .bar:after, .c100.p70 .fill, .c100.p85 .bar:after, .c100.p85 .fill, .c100.p90 .bar:after, .c100.p90 .fill {
+    @include rotate(180deg);
+}
+
+.c100 {
+    @extend %border-radius;
+
+    @include dimensions(1em, 1em);
+
+    position: relative;
+    font-size: 120px;
+    float: left;
+    margin: 0 0.1em 0.1em 0;
+    background-color: $chart-background;
+}
+
+.c100 *, .c100 *:before, .c100 *:after {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.c100.small {
+    font-size: 80px;
+}
+
+.c100 > span {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    line-height: 4em;
+    font-size: 0.25em;
+    color: inherit;
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.c100:after {
+    @extend %border-radius;
+
+    @include dimensions(0.84em, 0.84em);
+
+    position: absolute;
+    top: 0.08em;
+    left: 0.08em;
+    display: block;
+    content: " ";
+    background-color: whitesmoke;
+}
+
+.c100 .slice {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    clip: rect(0em, 1em, 1em, 0.5em);
+}
+
+.c100.p25 .bar {
+    @include rotate(90deg);
+}
+
+.c100.p55 .bar {
+    @include rotate(198deg);
+}
+
+.c100.p50 .bar {
+    @include rotate(180deg);
+}
+
+.c100.p70 .bar {
+    @include rotate(252deg);
+}
+
+.c100.p85 .bar {
+    @include rotate(306deg);
+}
+
+.c100.p90 .bar {
+    @include rotate(324deg);
+}

@@ -1,0 +1,12 @@
+.social {
+    @extend %flex;
+    padding: 3em 0;
+    flex-wrap: wrap;
+
+    a {
+        display: inline-block;
+        margin: 0.5em 1em;
+        text-decoration: none;
+        color: inherit;
+    }
+}

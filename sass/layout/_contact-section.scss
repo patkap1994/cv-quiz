@@ -1,0 +1,41 @@
+.contact {
+    .contact-list {
+        @extend %list-style;
+
+        display: flex;
+        flex-direction: column;
+
+        li {
+            display: flex;
+            align-items: center;
+            margin: 0.6em 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            p,
+            a {
+                padding: 1.2em 0.5em;
+            }
+            
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            .icon {
+                @include dimensions(25%, auto);
+                
+                padding: 0.3em;
+                background: $primary-color;
+                color: $secondary-color;
+                text-align: right;
+            }
+        }
+    }
+}

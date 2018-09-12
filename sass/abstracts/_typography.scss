@@ -1,0 +1,72 @@
+//FONT CAPTION
+.section-title {
+    @extend %text-uppercase;
+
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.section-title--dark {
+    @extend %text-center;
+
+    @extend %primary-color;
+
+    margin: 1.3em 0 0.7em;
+}
+
+.section-title--light {
+    color: $title-light;
+    background: $primary-color;
+    padding: 0.2em 0.5em;
+}
+
+.font-big {
+    @extend %text-uppercase;
+
+    @extend %text-center;
+
+    @extend %primary-color;
+
+    font-size: 5.5rem;
+    line-height: 0.9em;
+    margin: 0 0.2em;
+}
+
+.font-italic {
+    @extend %text-center;
+
+    font-style: italic;
+    font-size: 2.3rem;
+    color: $secondary-color;
+    background: $primary-color;
+    margin: 0.5em auto 0;
+    padding: 0.2em 0;
+}
+
+.font-list-bold {
+    @extend %text-uppercase;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+//MEDIA QUERIES
+@media screen and (min-width: $medium) and (max-width: $large) {
+    .font-big {
+        font-size: 4rem;
+    }
+
+    .font-italic {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: $small) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .font-big {
+        font-size: 3.8rem;
+    }
+}

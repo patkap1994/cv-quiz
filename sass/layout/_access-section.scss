@@ -1,0 +1,29 @@
+.access-section {
+    @extend %flex;
+    @include dimensions(100%,100%);
+    position: absolute;
+    z-index: 4;
+    top: -100%;
+    left: 0;
+    padding: 0 1em;
+    transition:      all 1s 0.8s ease-in-out;
+    -webkit-transition:      all 1s 0.8s ease-in-out;
+    -moz-transition:      all 1s 0.8s ease-in-out;
+    -ms-transition:      all 1s 0.8s ease-in-out;
+    -o-transition:      all 1s 0.8s ease-in-out;
+    
+    &.denied {
+        background: $access-denied;
+        top: 0;
+    }
+
+    &.granted {
+        background: $access-granted;
+        top: 0;
+    }
+
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+}

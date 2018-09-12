@@ -1,0 +1,77 @@
+.container {
+    @include dimensions(100%, 100%);
+
+    position: absolute;
+    z-index: 2;
+    top: 0;
+
+    //Centering div horizontally
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    max-width: 1000px;
+    margin: 0;
+
+    .cv-section {
+        display: none;
+        position: absolute;
+
+        &.show {
+            .cv-section-left,
+            .cv-section-right {
+                transform: translateX(0);
+                -webkit-transform: translateX(0);
+                -moz-transform: translateX(0);
+                -ms-transform: translateX(0);
+                -o-transform: translateX(0);
+            }
+        }
+
+        .cv-section-left {
+            width: 40%;
+            background: $secondary-color;
+            transform: translateX(-200%);
+            -webkit-transform: translateX(-200%);
+            -moz-transform: translateX(-200%);
+            -ms-transform: translateX(-200%);
+            -o-transform: translateX(-200%);
+            transition: transform 1.5s 1s ease-in-out;
+            -webkit-transition: transform 1.5s 1s ease-in-out;
+            -moz-transition: transform 1.5s 1s ease-in-out;
+            -ms-transition: transform 1.5s 1s ease-in-out;
+            -o-transition: transform 1.5s 1s ease-in-out;
+        }
+
+        .cv-section-right {
+            padding: 3em 0;
+            width: 60%;
+            transform: translateX(200%);
+            -webkit-transform: translateX(200%);
+            -moz-transform: translateX(200%);
+            -ms-transform: translateX(200%);
+            -o-transform: translateX(200%);
+            transition: transform 1.5s 1s ease-in-out;
+            -webkit-transition: transform 1.5s 1s ease-in-out;
+            -moz-transition: transform 1.5s 1s ease-in-out;
+            -ms-transition: transform 1.5s 1s ease-in-out;
+            -o-transition: transform 1.5s 1s ease-in-out;
+        }
+    }
+}
+
+//MEDIA QUERIES
+@media screen and (max-width: $medium) {
+    .container {
+        .cv-section {
+            flex-direction: column;
+
+            .cv-section-left,
+            .cv-section-right {
+                width: 100%;
+            }
+        }
+    }
+}

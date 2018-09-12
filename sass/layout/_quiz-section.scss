@@ -1,0 +1,91 @@
+.quiz-section {
+    @extend %flex;
+    @include dimensions(100%, 100%);
+    position: absolute;
+    overflow-x: hidden;
+    flex-direction: column;
+    z-index: 6;
+
+    &.hide {
+        display: none;
+    }
+
+    .quiz-container {
+        position: absolute;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        background: darken(#FFF, 8%);
+        font-size: 1rem;
+        padding: 2em 3.5em;
+        border-radius: 10px;
+        margin: 0.5em;
+        max-width: 500px;
+
+        transform: translateX(100vw);
+        -webkit-transform: translateX(100vw);
+        -moz-transform: translateX(100vw);
+        -ms-transform: translateX(100vw);
+        -o-transform: translateX(100vw);
+        transition: transform 1s 1s ease-in-out;
+        -webkit-transition: transform 1s 1s ease-in-out;
+        -moz-transition: transform 1s 1s ease-in-out;
+        -ms-transition: transform 1s 1s ease-in-out;
+        -o-transition: transform 1s 1s ease-in-out;
+
+        &.show {
+            opacity: 1;
+            transform: translateX(0);
+            -webkit-transform: translateX(0);
+            -moz-transform: translateX(0);
+            -ms-transform: translateX(0);
+            -o-transform: translateX(0);
+        }
+
+        &.hide {
+            opacity: 1;
+            transform: translateX(-100vw);
+            -webkit-transform: translateX(-100vw);
+            -moz-transform: translateX(-100vw);
+            -ms-transform: translateX(-100vw);
+            -o-transform: translateX(-100vw);
+            transition-delay: 0s;
+        }
+
+        .question {
+            @extend %text-center;
+            font-weight: 600;
+            margin-bottom: 0.7em;
+            font-size: 1.9em;
+        }
+
+        .answer {
+            @extend %text-center;
+            background: $secondary-color;
+            display: inline-block;
+            text-decoration: none;
+            color: inherit;
+            margin: 0.2em;
+            padding: 0.6em;
+            font-size: 1.3em;
+            border-radius: 15px;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            -ms-border-radius: 15px;
+            -o-border-radius: 15px;
+        }
+
+        .question-number {
+            font-size: 1.1em;
+            margin-top: 0.4em;
+            text-align: right;
+        }
+    }
+}
+
+//MEDIA QUERIES
+@media screen and (max-width: $medium) {
+    .quiz-container {
+        font-size: 0.8rem;
+    }
+}

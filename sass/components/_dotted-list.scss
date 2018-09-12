@@ -1,0 +1,38 @@
+.dotted-list {
+    padding: 0 2em 0 7em;
+    position: relative;
+    list-style: none;
+    margin-bottom: 3em;
+
+    &::before {
+        @include dimensions(4px, 100%);
+
+        @extend %pseudoelement;
+
+        background: $secondary-color;
+        left: 4.5em;
+        top: -0.5em;
+    }
+
+    li {
+        p:nth-child(2),
+        p:nth-child(3) {
+            font-weight: 600;
+        }
+
+        p:nth-child(4) {
+            margin: 0.3em 0 1.5em;
+        }
+
+        &::before {
+            @include dimensions(20px, 20px);
+
+            @extend %border-radius;
+
+            @extend %pseudoelement;
+
+            background: $secondary-color;
+            left: 4em;
+        }
+    }
+}

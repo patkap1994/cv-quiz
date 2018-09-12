@@ -1,0 +1,26 @@
+.portrait-container {
+    @extend %border-radius;
+
+    @extend %flex;
+
+    @include dimensions(300px, 300px);
+
+    margin: 6em auto 1.5em;
+    background: $portrait-background;
+
+    .portrait {
+        @extend %border-radius;
+
+        @include dimensions(95%, 95%);
+
+        padding: 0.4em;
+        border: 8px $secondary-color solid;
+    }
+}
+
+//MEDIA QUERIES
+@media screen and (max-width: $large) {
+    .portrait-container {
+        @include dimensions(200px,200px);
+    }
+}

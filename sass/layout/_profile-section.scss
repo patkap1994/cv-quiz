@@ -1,0 +1,9 @@
+.profile {
+    p {
+        padding: 0 2.5em;
+
+        &:first-of-type {
+            margin-bottom: 1.5em;
+        }
+    }
+}

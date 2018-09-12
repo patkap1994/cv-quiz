@@ -1,0 +1,40 @@
+%flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%border-radius {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+%box-model {
+    margin: 0;
+    padding: 0;
+}
+
+%pseudoelement {
+    content: '';
+    display: block;
+    position: absolute;
+}
+
+%list-style {
+    list-style: none;
+}
+
+%text-center {
+    text-align: center;
+}
+
+%text-uppercase {
+    text-transform: uppercase;
+}
+
+%primary-color {
+    color: $primary-color;
+}

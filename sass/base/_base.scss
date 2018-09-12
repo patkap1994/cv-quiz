@@ -1,0 +1,21 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: $roboto;
+}
+
+html, body {
+    @include dimensions(100%, 100%);
+    @extend %box-model;
+    overflow-x: hidden;
+}
+
+h1,
+h3,
+p,
+ul {
+    @extend %box-model;
+}

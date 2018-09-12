@@ -1,0 +1,42 @@
+[
+  {
+    "question": "Które miasto jest stolicą Polski?",
+    "answers": ["Warszawa", "Lublin"],
+    "trueAnswer": "Warszawa"
+  },
+  {
+    "question": "Jak nazywał się brat Lolka?",
+    "answers": ["Bolek", "Tolek"],
+    "trueAnswer": "Bolek"
+  },
+  {
+    "question": "Jak nazywa się smartfon firmy Apple?",
+    "answers": ["MacPhone", "iPhone"],
+    "trueAnswer": "iPhone"
+  },
+  {
+    "question": "Co to jest RWD?",
+    "answers": ["Responsive Web Design", "Replace Web Data"],
+    "trueAnswer": "Responsive Web Design"
+  },
+  {
+    "question": "Kim jest Tom Hanks?",
+    "answers": ["Aktorem", "Piosenkarzem"],
+    "trueAnswer": "Aktorem"
+  },
+  {
+    "question": "Ile lat trwała IIWŚ?",
+    "answers": ["13 lat", "6 lat"],
+    "trueAnswer": "6 lat"
+  },
+  {
+    "question": "Czerwony po angielsku to...",
+    "answers": ["Red", "Yellow"],
+    "trueAnswer": "Red"
+  },
+  {
+    "question": "Co jest większe?",
+    "answers": ["Krowa", "Pies"],
+    "trueAnswer": "Krowa"
+  }
+]

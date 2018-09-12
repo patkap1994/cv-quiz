@@ -1,0 +1,27 @@
+//Abstracts
+@import "abstracts/variables";
+@import "abstracts/typography";
+@import "abstracts/mixins";
+@import "abstracts/placeholders";
+
+//Base
+@import "base/base";
+
+//Components
+@import "components/portrait";
+@import "components/title-icons";
+@import "components/dotted-list";
+
+//Layout
+@import "layout/cv-section";
+@import "layout/contact-section";
+@import "layout/hobby-section";
+@import "layout/social-section";
+@import "layout/profile-section";
+@import "layout/skills-section";
+@import "layout/starting-section";
+@import "layout/quiz-section";
+@import "layout/access-section";
+
+//Vendor
+@import "vendor/circle-charts";
