@@ -201,7 +201,6 @@ html, body {
 
 .container .cv-section {
   display: none;
-  position: absolute;
 }
 
 .container .cv-section.show .cv-section-left,
