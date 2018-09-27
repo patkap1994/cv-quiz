@@ -2,7 +2,7 @@
 
 Quiz and CV made for recruitment process
 
-The goal of this exercise was to make a simple quiz with three questions.
+The goal of this exercise was to make a simple quiz with three questions.<br/>
 If the user answers all of them correctly then the CV will be revealed.
 If the user answers at least one question wrong then the CV will be covered.
 
